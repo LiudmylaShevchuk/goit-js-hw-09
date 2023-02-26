@@ -16,3 +16,37 @@ img {
   display: block;
   max-width: 100%;
 }
+
+#datetime-picker {
+  margin-bottom: 20px;
+  margin-right: 20px;
+
+  width: 330px;
+  height: 40px;
+
+  font-size: 18px;
+  letter-spacing: 0.04em;
+  text-align: center;
+  color: #3b3b3b;
+
+}
+
+.timer {
+  padding: 20px 30px;
+  width: 600px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+
+  font-size: 18px;
+  letter-spacing: 0.04em;
+  color: #3b3b3b;
+}
+
+.value {
+  position: relative;
+  padding: 3px;
+  font-size: 24px;
+}
