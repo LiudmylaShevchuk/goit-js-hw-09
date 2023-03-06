@@ -19,6 +19,7 @@ function createPromise(position, delay) {
 
 function onCreatePromises(e) {
   e.preventDefault();
+
   const formData = new FormData(e.currentTarget);
   const dataParams = {};
 
@@ -29,8 +30,6 @@ function onCreatePromises(e) {
   let { amount, step, delay } = dataParams;
 
   for (let i = 1; i <= amount; i += 1) {
-    delay += step;
-
     createPromise(i, delay)
       .then(({ position, delay }) => {
         alert(`✅ Fulfilled promise ${position} in ${delay}ms`);
@@ -39,6 +38,6 @@ function onCreatePromises(e) {
         alert(`❌ Rejected promise ${position} in ${delay}ms`);
       });
 
-    refs.form.reset();
+    delay += step;
   }
 }
